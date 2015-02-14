@@ -1,0 +1,39 @@
+L'application fonctionne jusqu'au sujet 6. 
+Cette application a été réalisé et testé sur la machine virtuel vagrant que nous avions installé dans les TP précédants.
+Une fois vagrant lancé, 
+Il faut installer les différentes dépendances avec la commande suivante : 
+	$ php composer.phar install
+Il faut ajouter les tables USERS et STATUSES dans la bdd uframework avec la commande suivante :
+	vagrant@vm $ mysql uframework -uuframework -ppassw0rd < app/config/schema.sql
+Ensuite il suffit d'aller sur le localhost:8082/ pour accéder à l'application.
+
+Voici les différentes routes de l'application :
+LES GET :
+	/ : redirection sur /statuses.
+	/﻿statusNotFound : redirection sur une page d'erreur.
+	/statuses  : liste tous les status.
+		Sur /statuses il est possible de passer différents arguments :
+		/statuses?orderBy=status_date$desc : - Tri les tweets (Le $desc est optionnel).
+		/statuses?orderBy=status_message : idem.
+		/statuses?limit=0$5 : Limite l'affichage du nombre de tweets (Ici les tweets 0 à 5).
+		/statuses?user=1 : Liste des tweets spécifique à un utilisateur (Ici l'utilisateur d'id 1).
+	/statuses/1 : retourne le tweet d'id 1
+	/register : redirection sur la page d'enregistrement
+	/login : redirection sur la page de connection
+	/logout : Déconnexion (session_destroy)
+
+Les POST :
+	/statuses : Post un tweet
+	/register : Post des données pour l'enregistrement d'un utilisateur.
+	/login : Post des données pour la connexion d'un utilisateur.
+
+Le DELETE :
+	/statuses/1 : supprime le status d'id 1
+
+Note : 
+Les tests demandé ont également été fait, j'ai également fait des tests avec Goutte 
+bien que je n'ai pas fait de test sur les methodes POST car j'ai rencontré des problèmes dessus.
+Je n'ai pas essayé Behat ou Minsk à la fin du TP6 par manque de temps.
+Ajout de la library password_compat dans composer.json afin de bénéficier des fonctions password_* de PHP5.5
+car la méthode password_hash n'était pas reconnue en PHP4.4.
+La partie graphique de l'application a été réalisé avec bootstrap.
