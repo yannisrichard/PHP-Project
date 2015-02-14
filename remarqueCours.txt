@@ -1,7 +1,0 @@
-Remarques sur le cours et les TP :
-
-Je n'ai pas grand chose à dire sur les cours mise à part que ça faisait souvent beaucoup d'informations d'un coup.
-
-Sur les TP, il serait peut-être simpa d'expliquer si on utilise les patterns que l'on a vu dans le cours, car je ne les ai pas vraiment retenus.
-Aussi, les TP étaient souvent trop longs par rapports aux heures de TP que l'on avait la semaine, ou c'est juste moi qui n'avance pas assez vite! En tout cas heureusement que j'ai réussis à installer vagrant sur mon pc après les premiers TP ce qui m'a évité de prendre du retard et de pouvoir terminer le projet dans les temps ^^
-Sinon j'ai trouvé que les TP étaient assez bien expliqué surtout les premiers, après pour les deux derniers je ne sais pas si ils étaient plus difficile mais j'ai eu du mal à réaliser certains tests bien que j'ai finalement plus ou moins bien réussis.
